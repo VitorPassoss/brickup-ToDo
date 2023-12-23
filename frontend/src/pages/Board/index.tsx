@@ -102,7 +102,6 @@ export function Board() {
     setHandleRender((prev) => !prev);
   };
 
-
   const CardDelete = (cardId: string) => {
     deleteCard(cardId).then((res) => {
       dispatch(fetchCards());
@@ -117,7 +116,6 @@ export function Board() {
     })
   }
 
-
   return (
     <LayoutCore>
       <DragDropContext onDragEnd={onDragEnd}>
@@ -129,7 +127,7 @@ export function Board() {
                   <StyledCard
                     title={card.nome}
                     headStyle={{ backgroundColor: '#1677ff', color: "#fff" }}
-                    extra={<Button type="primary" danger size='small' onClick={() => { CardDelete(card.id) }} icon={<DeleteOutlined  />}>
+                    extra={<Button type="primary" danger size='small' onClick={() => { CardDelete(card.id) }} icon={<DeleteOutlined />}>
                     </Button>} >
 
                     <div>
@@ -147,7 +145,6 @@ export function Board() {
                                     opacity: snapshot.isDragging ? '0.5' : '1',
                                   }}
                                 >
-
                                   <StyledTask>
                                     <Flex vertical align="start">
                                       <div style={{
@@ -156,33 +153,27 @@ export function Board() {
                                         width: '100%',
                                         backgroundColor: '#1677ff',
                                         borderRadius: '8px',
-
                                       }}>
                                         <StyledText>
                                           {task.nome}
                                         </StyledText>
-
                                         <span><Button
                                           type="primary"
                                           danger
                                           size='small'
                                           onClick={() => { TaskDelete(task.id) }}
-                                          icon={<DeleteOutlined  />}>
+                                          icon={<DeleteOutlined />}>
                                         </Button></span>
                                       </div>
-
                                       <div>
                                         {task.descricao}
                                       </div>
-
                                       {task.thumb && (
                                         <Image
                                           width={'100%'}
                                           style={{ height: '250px' }}
                                           fallback={task?.thumb}
-                                        >
-
-                                        </Image>
+                                        />
                                       )}
 
                                     </Flex>
