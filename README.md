@@ -33,8 +33,6 @@ Certifique-se de ter as seguintes tecnologias instaladas antes de prosseguir:
 
 # Tutorial
 
-## Preparação de Ambiente
-
 ### Frontend
 ```bash
   cd frontend
