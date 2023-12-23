@@ -33,6 +33,13 @@ Certifique-se de ter as seguintes tecnologias instaladas antes de prosseguir:
 
 # Tutorial
 
+### Backend
+```bash
+  cd backend
+  mvn dependency:resolve
+  mvn spring-boot:run
+```
+
 ### Frontend
 ```bash
   cd frontend
@@ -40,9 +47,4 @@ Certifique-se de ter as seguintes tecnologias instaladas antes de prosseguir:
   npm run dev
 ```
 
-### Backend
-```bash
-  cd backend
-  mvn dependency:resolve
-  mvn spring-boot:run
-```
+
