@@ -31,13 +31,6 @@ const SideMenu: React.FC = () => {
 
   const items: MenuItem[] = [
     getItem('Area de Trabalho', '1', <DesktopOutlined />),
-  
-    getItem('Configurações', '2', <MailOutlined />, [
-      getItem('Minha conta', '3'),
-    ]),
-  
-    getItem('Sair', '4', <DesktopOutlined />),
-
   ];
 
 
